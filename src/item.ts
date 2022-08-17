@@ -106,21 +106,21 @@ export default class MetaViuBillboard {
             response = await callResponse.json();
             let position;
             this.redirect_url[this.billboard_id] = response.redirect_url;
-            this.rotation = response.content.side_1.type == 'image' ? new Vector3(-360, 0, 295) : Quaternion.Euler(360, 78.65, 0);
+            this.rotation = response.content.side_1.type == 'image' ? Quaternion.Euler(180, 78.65, 0) : Quaternion.Euler(360, 78.65, 0);
             this.render_content(host, response.content.side_1.url, 'side1', new Transform({
                 position: new Vector3(2.837, 4.04, 0.34),
                 rotation: this.rotation,
                 scale: new Vector3(3.54, 2.5, 2)
             }), response.content.side_1.type)
 
-            this.rotation = response.content.side_2.type == 'image' ? new Vector3(26.5, 0, 10) : Quaternion.Euler(360, -41.35, 0);
+            this.rotation = response.content.side_2.type == 'image' ?Quaternion.Euler(180, -41.35, 0) : Quaternion.Euler(360, -41.35, 0);
             this.render_content(host, response.content.side_2.url, 'side2', new Transform({
                 position: new Vector3(1.152, 4.04, 0.89),
                 rotation: this.rotation,
                 scale: new Vector3(3.54, 2.5, 2)
             }), response.content.side_2.type);
 
-            this.rotation = response.content.side_2.type == 'image' ? new Vector3(59, 0, 360) : Quaternion.Euler(360, 198.66, 0);
+            this.rotation = response.content.side_2.type == 'image' ? Quaternion.Euler(180, 198.66, 0) : Quaternion.Euler(360, 198.66, 0);
             this.render_content(host, response.content.side_3.url, 'side3', new Transform({
                 position: new Vector3(1.5, 4.04, -0.846),
                 rotation: this.rotation,
