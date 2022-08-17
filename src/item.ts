@@ -5,7 +5,10 @@ import {getParcel, ILand} from "@decentraland/ParcelIdentity";
 export default class MetaViuBillboard {
     private videoTexture: any;
     private rotation: any;
-    private billboard_id = 1;
+    /*Your nft id here
+    billboard_id = YOUR_NFT_ID
+    Default is 7777 */
+    private billboard_id = 7777;
     private redirect_url = [];
 
     init() {
