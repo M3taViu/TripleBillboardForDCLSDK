@@ -1,0 +1,11 @@
+{
+  "name": "MetaViu Triple #{{billboard_id}}",
+  "model": "models/MetaViuTriple.glb",
+  "tags": [
+    "image","billboard", "screen", "display", "smart", "advert", "sign"
+  ],
+  "category": "decorations",
+  "parameters": [
+
+  ]
+}
